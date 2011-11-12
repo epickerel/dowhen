@@ -1,6 +1,6 @@
 ## jQuery.doWhen( testFn, callbackFn, config )
 
-doWhen is a jQuery plugin to solve all your wait-until-ready problems, wash your dishes for you, and blow dry your cat when it falls in the tub. All that for just 262 bytes, minified!
+doWhen is a jQuery plugin to solve all your wait-until-ready problems, wash your dishes for you, and blow dry your cat when it falls in the tub. All that for just 263 bytes, minified!
 
 Have you ever called a function before all the things it depends on are ready? The dependencies might be an html node, a plugin, a dynamically generated script finished loading, an image finished loading, a server state checked via ajax... the possibilities are endless. If you've been coding Javascript as long as I have, you've probably created countless bespoke solutions to fit each case.
 
@@ -35,4 +35,4 @@ And, lastly, if you want to use a different interval than the default of 100ms b
     }
 
 ---------
-Note that it would be *very* easy to adapt this to remove the jQuery dependency. The only thing it's needed for is a shallow "extend" and a namespace to put the object.
+Update 11-11-11: doWhen now has a standard non-jQuery version, just 335 bytes! See the "plain" directory.
