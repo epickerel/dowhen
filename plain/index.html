@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<textarea style="width:500px;height:200px;"></textarea>
+<script src="dowhen.min.js"></script>
+<script type="text/javascript">
+(function(){
+  var time = new Date().getTime(),
+    ta = document.getElementsByTagName('textarea')[0];
+  ta.innerHTML = 'loading jQuery';
+  Event.doWhen(function(){
+    return !!window.jQuery;
+  }, function(){
+    ta.innerHTML += '\njQuery loaded in ' + (new Date().getTime() - time) + 'ms!';
+  });
+}());
+</script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js"></script>
+</body>
+</html>
+
+
