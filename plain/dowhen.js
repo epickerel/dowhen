@@ -6,7 +6,7 @@
  */
 (function(){
   "use strict";
-  var w = window,
+  var global = this,
     defaults = {
       interval: 100
     },
@@ -30,7 +30,7 @@
         tick(iVars);
       }, iVars.interval);
     };
-  w.Event.doWhen = function(test, cb, cfg){
+  global.Event.doWhen = function(test, cb, cfg){
     var options = extend({
         test: test,
         cb: cb
