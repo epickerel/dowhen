@@ -22,7 +22,7 @@
     tick = function(iVars){
       if (iVars.test()) {
         clearInterval(iVars.iid);
-        iVars.cb.call(iVars.context || w, iVars.data);
+        iVars.cb.call(iVars.context || global, iVars.data);
       }
     },
     start = function(iVars){
