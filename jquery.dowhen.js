@@ -6,14 +6,14 @@
  */
 (function(){
   "use strict";
-  var defaults, tick, start, w = window, $ = w.jQuery;
+  var defaults, tick, start, global = this, $ = global.jQuery;
   defaults = {
     interval: 100
   };
   tick = function(iVars){
     if (iVars.test()) {
       clearInterval(iVars.iid);
-      iVars.cb.call(iVars.context || w, iVars.data);
+      iVars.cb.call(iVars.context || global, iVars.data);
     }
   };
   start = function(iVars){

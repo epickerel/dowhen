@@ -1,6 +1,6 @@
 ## jQuery.doWhen( testFn, callbackFn, config )
 
-doWhen is a jQuery plugin to solve all your wait-until-ready problems, wash your dishes for you, and blow dry your cat when it falls in the tub. All that for just 263 bytes, minified!
+doWhen is a jQuery plugin to solve all your wait-until-ready problems, wash your dishes for you, and blow dry your cat when it falls in the tub. All that for just 261 bytes, minified!
 
 Have you ever called a function before all the things it depends on are ready? The dependencies might be an html node, a plugin, a dynamically generated script finished loading, an image finished loading, a server state checked via ajax... the possibilities are endless. If you've been coding Javascript as long as I have, you've probably created countless bespoke solutions to fit each case.
 
