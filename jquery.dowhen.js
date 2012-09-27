@@ -1,23 +1,23 @@
 /*jslint browser: true, white: true, plusplus: true, maxerr: 50, indent: 2 */
 /*
  * doWhen jQuery plugin
- * Copyright 2011, Emmett Pickerel
+ * Copyright 2012, Emmett Pickerel
  * Released under the MIT Licence.
  */
 
 (function(factory){
   'use strict';
-  if (typeof define === 'function' && define.amd) {
+  var global = window;
+  if (typeof global.define === 'function' && global.define.amd) {
     // Register as an anonymous AMD module:
     define(['jquery'], factory);
   } else {
     // Browser globals:
-    factory(window.jQuery);
+    factory(global, global.jQuery);
   }
-}(function($){
+}(function(global, $){
   "use strict";
-  var defaults, tick, start,
-    global = Function('return this')();
+  var defaults, tick, start;
   defaults = {
     interval: 100
   };
