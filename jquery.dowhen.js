@@ -10,21 +10,21 @@
   var global = window;
   if (typeof global.define === 'function' && global.define.amd) {
     // Register as an anonymous AMD module:
-    define(['jquery'], factory);
+    global.define(['jquery'], factory);
   } else {
     // Browser globals:
-    factory(global, global.jQuery);
+    factory(global.jQuery);
   }
-}(function(global, $){
+}(function($){
   "use strict";
   var defaults, tick, start;
   defaults = {
     interval: 100
   };
   tick = function(iVars){
-    if (iVars.test()) {
+    if (iVars.test.call(iVars.context || window)) {
       clearInterval(iVars.iid);
-      iVars.cb.call(iVars.context || global, iVars.data);
+      iVars.cb.call(iVars.context || window, iVars.data);
     }
   };
   start = function(iVars){
