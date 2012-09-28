@@ -11,7 +11,7 @@
   var time = new Date().getTime(),
     ta = document.getElementsByTagName('textarea')[0];
   ta.innerHTML = 'loading jQuery';
-  Event.doWhen(function(){
+  window.doWhen(function(){
     return !!window.jQuery;
   }, function(){
     ta.innerHTML += '\njQuery loaded in ' + (new Date().getTime() - time) + 'ms!';

@@ -40,4 +40,5 @@
       cb: cb
     }, defaults, cfg));
   };
+  return $.doWhen;
 }));
