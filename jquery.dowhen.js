@@ -1,4 +1,4 @@
-/*jslint browser: true, white: true, plusplus: true, maxerr: 50, indent: 2 */
+/*jslint browser: true, white: true, maxerr: 50, indent: 2 */
 /*
  * doWhen jQuery plugin
  * Copyright 2012, Emmett Pickerel
@@ -22,9 +22,11 @@
     interval: 100
   };
   tick = function(iVars){
-    if (iVars.test.call(iVars.context || window)) {
+    var context = iVars.context || window,
+        data = iVars.data;
+    if (iVars.test.call(context, data)) {
       clearInterval(iVars.iid);
-      iVars.cb.call(iVars.context || window, iVars.data);
+      iVars.cb.call(context, data);
     }
   };
   start = function(iVars){
